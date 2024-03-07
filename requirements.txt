@@ -6,3 +6,4 @@ openai
 chromadb
 tiktoken
 cohere
+gitpython
