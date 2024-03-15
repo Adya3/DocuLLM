@@ -1,5 +1,5 @@
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from docullm.utils import getVectorStore, getEmbeddings
+from core.utils import getVectorStore, getEmbeddings
 
 
 class VectorStore:
@@ -8,6 +8,7 @@ class VectorStore:
         self.collection_name = collection_name
         self.embeddings = getEmbeddings(embedding_type)
         self.db = getVectorStore(db_type)
+        self.load()
         
     def load(self):
         self.vectorstore = self.db(
