@@ -47,7 +47,7 @@ def ingest(args):
     data.loadDocuments(local_repo_path)
     documents = data.getDocuments()
     
-    db_path = os.path.join(config['base_db_path'], f"db_{repo_name})
+    db_path = os.path.join(config['base_db_path'], f"db_{repo_name}")
     if os.path.exists(db_path) and args.update == False:
         print("Database already exists. Please set \'update\' = True to update the repository data")
         return
